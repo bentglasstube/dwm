@@ -51,7 +51,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[]  = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *dcalcmd[]   = { "dcal", "-k", "-fn", font, "-bg", normbgcolor, "-bd", selfgcolor, "-of", normfgcolor, "-cf", selfgcolor, NULL };
-static const char *termcmd[]   = { "urxvt", NULL };
+static const char *termcmd[]   = { "termite", NULL };
 static const char *slimlock[]  = { "/home/alan/bin/lock", NULL };
 static const char *screencap[] = { "import", "-window", "root", "/tmp/screenshot.png", NULL };
 static const char *mpc_play[]  = { "mpc", "play", NULL };
