@@ -21,6 +21,7 @@ static const Rule rules[] = {
   /* class      instance    title       tags mask     isfloating  monitor */
   { "Chromium", NULL,       NULL,       0,            False,      1 },
   { "luakit",   NULL,       NULL,       0,            False,      1 },
+  { "MuPDF",    NULL,       NULL,       0,            False,      1 },
   { "Pinentry", NULL,       NULL,       0,            True,       -1 },
   { "Git-gui--askpass", NULL, NULL,     0,            True,       -1 },
 };
