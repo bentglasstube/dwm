@@ -9,6 +9,8 @@ static const char normfgcolor[]     = "#839496";
 static const char selbordercolor[]  = "#93a1a1";
 static const char selbgcolor[]      = "#002b36";
 static const char selfgcolor[]      = "#2aa198";
+static const char hlcolor1[]        = "#dc322f";
+static const char hlcolor2[]        = "#268bd2";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
@@ -51,8 +53,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[]  = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *dcalcmd[]   = { "dcal", "-k", "-fn", font, "-bg", normbgcolor, "-bd", selfgcolor, "-of", normfgcolor, "-cf", selfgcolor, NULL };
-static const char *dcalkbcmd[] = { "dcal", "-fn", font, "-bg", normbgcolor, "-bd", selfgcolor, "-of", normfgcolor, "-cf", selfgcolor, NULL };
+static const char *dcalcmd[]   = { "dcal", "-fn", font, "-bg", normbgcolor, "-bd", selbordercolor, "-of", normfgcolor, "-cf", selfgcolor, "-tf", hlcolor1, "-hf", hlcolor2, "-k", NULL };
+static const char *dcalkbcmd[] = { "dcal", "-fn", font, "-bg", normbgcolor, "-bd", selbordercolor, "-of", normfgcolor, "-cf", selfgcolor, "-tf", hlcolor1, "-hf", hlcolor2, NULL };
 
 static Key keys[] = {
   /* modifier                     key                       function        argument */
@@ -100,7 +102,7 @@ static Button buttons[] = {
   { ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
   { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
   { ClkWinTitle,          0,              Button1,        zoom,           {0} },
-  { ClkStatusText,        0,              Button1,        spawn,          {.v = dcalcmd } },
+  { ClkStatusText,        0,              Button3,        spawn,          {.v = dcalcmd } },
   { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
   { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
   { ClkTagBar,            0,              Button1,        view,           {0} },
