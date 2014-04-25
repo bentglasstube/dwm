@@ -93,6 +93,7 @@ static Key keys[] = {
   { MODKEY,                       XK_slash,                 spawn,          {.v = dcalkbcmd } },
 
   { MODKEY,                       XK_space,                 spawn,          {.v = dmenucmd } },
+  { MODKEY|ShiftMask,             XK_space,                 togglefloating, {0} },
 };
 
 /* button definitions */
